@@ -53,7 +53,7 @@ let `n` denote the number of arrows and `m` denote number of possible direction 
 5. solve for `X`
 
     ```text
-    X = A^-1 B (mod m)
+    X = (A^-1)(-B) (mod m)
     ```
 
 ### Patch for Hard and Expert
