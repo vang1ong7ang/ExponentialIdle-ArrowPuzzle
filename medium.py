@@ -1,7 +1,7 @@
 from sympy import Matrix
 
 
-def easy(B: Matrix):
+def medium(B: Matrix):
     A = Matrix([
         [
             1 if jx-1 <= ix <= jx+1 and jy-1 <= iy <= jy+1 else 0
