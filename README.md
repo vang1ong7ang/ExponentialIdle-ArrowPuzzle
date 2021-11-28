@@ -4,16 +4,16 @@ the optimal solution for arrow puzzle of game exponential idle
 
 ## The Problem
 
-The goal of this minigame is to have all the arrows pointed upwards. There are four levels of difficulty:
-
-- Easy : 3 by 3 square, 4 possible orientations
-- Medium : 4 by 4 square, 4 possible orientations
-- Hard : hexagonal pattern of side length 4, 2 possible orientations
-- Expert : hexagonal pattern of side length 4, 6 possible orientations
-
-On a square grid, whenever an arrow is touched, it will rotate 90° clockwise along with all its neighbours. The neighbours are all arrows in a 3 by 3 square centered around the touched arrow, there are less neighbours when you touch an arrow on an edge or a corner (ie the board is not a torus).
-
-On the hexagonal grid, the neighbours are all adjacent arrows (up to 6). On the Hard difficulty, the arrows flip between up and bottom orientation when touched, on Extreme, they rotate by 60° clockwise.
+> The goal of this minigame is to have all the arrows pointed upwards. There are four levels of difficulty:
+> 
+> - Easy : 3 by 3 square, 4 possible orientations
+> - Medium : 4 by 4 square, 4 possible orientations
+> - Hard : hexagonal pattern of side length 4, 2 possible orientations
+> - Expert : hexagonal pattern of side length 4, 6 possible orientations
+>
+> On a square grid, whenever an arrow is touched, it will rotate 90° clockwise along with all its neighbours. The neighbours are all arrows in a 3 by 3 square centered around the touched arrow, there are less neighbours when you touch an arrow on an edge or a corner (ie the board is not a torus).
+> 
+> On the hexagonal grid, the neighbours are all adjacent arrows (up to 6). On the Hard difficulty, the arrows flip between up and bottom orientation when touched, on Extreme, they rotate by 60° clockwise.
 
 external resources:
 
@@ -26,7 +26,7 @@ external resources:
 
 ## The Solution
 
-let `n` denote the number of arrows and `m` denote number of possible direction of arrows (`4` for easy and medium; `2` for hard; `6` for expert)
+let `n` denote the number of arrows and `m` denote number of possible orientations of arrows (`4` for easy and medium; `2` for hard; `6` for expert)
 
 1. define a column vector `X` (size: `n×1`)
 
@@ -38,7 +38,7 @@ let `n` denote the number of arrows and `m` denote number of possible direction 
 
 3. define a column vector `B` (size: `n×1`)
 
-   element `B_i` represents the initial direction of `i`-th arrow
+   element `B_i` represents the initial orientation of `i`-th arrow
 
    - for easy and medium: `0` is `up`; `1` is `right`; `2` is `down`; `3` is left;
    - for hard: `0` is `up`; `1` is `down`;
