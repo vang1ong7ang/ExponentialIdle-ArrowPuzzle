@@ -34,7 +34,7 @@ let `n` denote the number of arrows and `m` denote number of possible orientatio
 
 2. define a square matrix `A` (size: `n×n`)
 
-    element `A_ij` is `1` if `i`-th arrow is a neighbour of `j`-th arrow, otherwise, `A_ij` is `0`
+    element `A_ij` is `1` if `i = j` or `i`-th arrow is a neighbour of `j`-th arrow, otherwise, `A_ij` is `0`
 
 3. define a column vector `B` (size: `n×1`)
 
