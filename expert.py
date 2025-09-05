@@ -1,7 +1,7 @@
 from sympy import Matrix
 
 
-def hard(B: Matrix):
+def expert(B: Matrix):
     N = 4
     A = Matrix([
         [
